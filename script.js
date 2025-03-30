@@ -9,32 +9,34 @@ function copyIP() {
 }
 
 // Плавная прокрутка для навигационных ссылок
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
     });
-});
 
-// Анимация появления элементов при прокрутке
-const observerOptions = {
-    threshold: 0.1
-};
+    // Анимация появления элементов при прокрутке
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.feature, .step, .rules ul li').forEach(el => {
+        observer.observe(el);
     });
-}, observerOptions);
-
-document.querySelectorAll('.feature, .step, .rules ul li').forEach(el => {
-    observer.observe(el);
 });
