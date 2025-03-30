@@ -5,87 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AtomWorld - Minecraft PvP Сервер</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Резервные базовые стили */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #000000;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">AtomWorld</div>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#about">О сервере</a></li>
-                <li><a href="#rules">Правила</a></li>
-                <li><a href="#how-to-join">Как присоединиться</a></li>
-                <li><a href="admin.html">Админ панель</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Добро пожаловать на AtomWorld</h1>
-                <p>Лучший PvP сервер Minecraft 1.16.5</p>
-                <div class="server-ip">
-                    <span>IP: play.atomworld.fun</span>
-                    <button onclick="copyIP()">Копировать IP</button>
-                </div>
-                <a href="https://discord.gg/TV6VpU6FKd" target="_blank" class="discord-button">Присоединиться к Discord</a>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>О нашем сервере</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>PvP Арены</h3>
-                    <p>Специальные арены для сражений с другими игроками</p>
-                </div>
-                <div class="feature">
-                    <h3>Система рейтинга</h3>
-                    <p>Соревнуйтесь за место в топе лучших бойцов</p>
-                </div>
-                <div class="feature">
-                    <h3>Награды и призы</h3>
-                    <p>Получайте награды за победы в сражениях</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="rules" class="rules">
-            <h2>Правила сервера</h2>
-            <ul>
-                <li>Уважайте других игроков</li>
-                <li>Соблюдайте правила PvP арен</li>
-                <li>Запрещено использование эксплойтов</li>
-                <li>Соблюдайте общие правила поведения</li>
-            </ul>
-        </section>
-
-        <section id="how-to-join" class="how-to-join">
-            <h2>Как присоединиться</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>1. Запустите Minecraft</h3>
-                    <p>Убедитесь, что у вас установлена версия 1.16.5</p>
-                </div>
-                <div class="step">
-                    <h3>2. Добавьте сервер</h3>
-                    <p>Введите IP: play.atomworld.fun</p>
-                </div>
-                <div class="step">
-                    <h3>3. Присоединяйтесь!</h3>
-                    <p>Нажмите "Подключиться" и начните сражения</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 AtomWorld - Все права защищены</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+// ... existing code ...
