@@ -37,4 +37,5 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.feature, .step, .rules ul li').forEach(el => {
     observer.observe(el);
-});
+});cd C:\Users\nikit\atomworld-website
+dir
